@@ -10,8 +10,8 @@ model = load_model('model/ann_model.h5')
 
 # Dummy label encoders and scaler (harus disamakan dengan saat training)
 # Buat ulang dari data yang sama
-df = pd.read_csv('data/clothes.csv')
-X = df.drop('price', axis=1)
+df = pd.read_csv('data/clothes_price_prediction_data.csv')
+X = df.drop('Price', axis=1)
 
 label_encoders = {}
 for col in X.select_dtypes(include='object').columns:
